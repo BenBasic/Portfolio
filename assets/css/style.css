@@ -1,3 +1,4 @@
+/* Root variables for borders, border radiuses, and margins used throughout document */
 :root {
     --img-border: 10px solid black;
     --img-border-radius: 50%;
@@ -5,18 +6,21 @@
 
 }
 
+/* Flex properties for body of index.html */
 body {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+/*Size and background color for main of index.html */
 main {
     width: 100%;
     height: 100%;
     background-color: rgb(119, 150, 177);
 }
 
+/* Assigning font color and font family for h1-6 and p for index.html */
 h1,
 h2,
 h3,
@@ -28,7 +32,7 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, Helvetica, sans-serif;
 }
 
-
+/* Header padding, flex direction, background color, and border for index.html*/
 .header {
     padding: 20px;
     flex-direction: row;
@@ -36,6 +40,7 @@ p {
     border: var(--img-border);
 }
 
+/* Header Navigation properties */
 .header nav {
     padding-right: 10px;
     margin-right: 20px;
@@ -46,38 +51,41 @@ p {
     border: var(--img-border);
 }
 
-/* Determines list style for the ul tags inside of the nav tags inside of the header class */
+/* Header Navigation list style, set to none to avoid unwanted circles, squares, etc next to navigation list items */
 .header nav ul {
     list-style-type: none;
 }
 
-/* Determines the display and left margin for the li, ul, and nav tags inside of the header class */
+/* Header Navigation list item display and margin settings */
 .header nav ul li {
     display: inline-block;
     margin-left: 10px;
 }
 
-/* unvisited link */
+/* Text color for unvisited link */
 a:link {
     color: black;
   }
   
-  /* visited link */
+  /* Text color for visited link */
   a:visited {
     color: rgb(128, 0, 0);
   }
   
-  /* mouse over link */
+  /* Text color for text with a mouse over link */
   a:hover {
     color: rgb(245, 61, 61);
   }
   
-  /* selected link */
+  /* Text color for link while selected */
   a:active {
     color: rgb(153, 57, 57);
   }
 
 
+  /* Code used to prevent images from becoming blurry once scaled down to a certain size, without this code all images will become blurry once scaled down beyond a certain amount.
+  I'm not sure how Im supposed to cite code for assignments, so here is a link to where I found this: https://tutorialsclass.com/code/css-code-to-fix-blurry-image-when-scaling-down/
+  */
 img {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
@@ -86,6 +94,7 @@ img {
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
   }
 
+  /* About Me panel properties */
 #about-me {
     margin-top: 100px;
     flex: 1 0 100%;
@@ -101,6 +110,7 @@ img {
         );
 }
 
+ /* Work panel properties */
 #work {
     margin-top: var(--panel-margin);
     flex: 1 0 100%;
@@ -118,6 +128,7 @@ img {
         );
 }
 
+ /* Contact Me panel properties */
 #contact-me {
     margin-top: var(--panel-margin);
     margin-bottom: var(--panel-margin);
@@ -136,7 +147,7 @@ img {
         );
 }
 
-
+ /* About Me Photo properties */
 .profile-pic {
     flex-wrap: wrap;
     float: left;
@@ -149,6 +160,7 @@ img {
     min-width: 0;
 }
 
+/* Work panel icon photo properties */
 .work-pic {
     flex-wrap: wrap;
     float: left;
@@ -161,6 +173,7 @@ img {
     min-width: 0;
 }
 
+/* Work projects photo properties */
 .work-pic1 {
     flex-wrap: wrap;
     float: left;
@@ -172,26 +185,24 @@ img {
     min-width: 0;
 }
 
+/* Spacing property used for margin of Module 1 Challenge item in Work panel */
 .spacing {
     margin-top: 100px;
 }
 
+/* Spacing property used for margin of Game Development and HWY 17 Hotel items in Work panel */
 .spacing2 {
     margin-top: 120px;
 }
 
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
+/* Footer properties */
 footer {
     background-color: white;
     border: var(--img-border);
     text-align: center;
 }
 
+/* Flex properties adjusting About Me photo size and Work projects spacing when viewing the page on a slimmer browser window */
 @media screen and (max-width: 720px) {
     .profile-pic{
         max-height:100px;
