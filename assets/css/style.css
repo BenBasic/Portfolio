@@ -1,0 +1,168 @@
+:root {
+    --img-border: 10px solid black;
+    --img-border-radius: 50%;
+    --panel-margin: 50px;
+
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+
+
+.bgImage {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    padding: 20px;
+    flex-direction: row;
+    background-color: red;
+}
+
+.header nav {
+    padding-right: 10px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: aqua;
+}
+
+/* Determines list style for the ul tags inside of the nav tags inside of the header class */
+.header nav ul {
+    list-style-type: none;
+}
+
+/* Determines the display and left margin for the li, ul, and nav tags inside of the header class */
+.header nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+img {
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  }
+
+#about-me {
+    margin-top: 100px;
+    flex: 1 0 100%;
+    padding: 2rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    width: 70%;
+    border: 10px solid black;
+    min-width: 0
+}
+
+#work {
+    margin-top: var(--panel-margin);
+    flex: 1 0 100%;
+    padding: 2rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    width: 70%;
+    height: auto;
+    overflow:auto;
+    border: 10px solid black;
+    min-width: 0
+}
+
+#contact-me {
+    margin-top: var(--panel-margin);
+    margin-bottom: var(--panel-margin);
+    flex: 1 0 100%;
+    padding: 2rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    width: 70%;
+    border: 10px solid black;
+    min-width: 0
+}
+
+
+.profile-pic {
+    flex-wrap: wrap;
+    float: left;
+    margin-top: -15px;
+    margin-right: 25px;
+    max-height: 150px;
+    border: var(--img-border);
+    border-radius: var(--img-border-radius);
+    object-fit:contain;
+    min-width: 0;
+}
+
+.work-pic {
+    flex-wrap: wrap;
+    float: left;
+    margin-top: -15px;
+    margin-right: 25px;
+    max-height: 150px;
+    border: var(--img-border);
+    border-radius: var(--img-border-radius);
+    object-fit:contain;
+    min-width: 0;
+}
+
+.work-pic1 {
+    flex-wrap: wrap;
+    float: left;
+    margin-top: -15px;
+    margin-right: 25px;
+    max-height: 150px;
+    border: var(--img-border);
+    object-fit:contain;
+    min-width: 0;
+}
+
+.spacing {
+    margin-top: 100px;
+}
+
+.spacing2 {
+    margin-top: 120px;
+}
+
+#work-content {
+    justify-content: left;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 720px) {
+    .profile-pic{
+        max-height:100px;
+    }
+    .spacing {
+        margin-top: 100px;
+    
+    }
+    
+    .spacing2 {
+        margin-top: 0px;
+    }
+}
+
